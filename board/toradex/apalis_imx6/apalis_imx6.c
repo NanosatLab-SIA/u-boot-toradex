@@ -507,6 +507,14 @@ int board_eth_init(bd_t *bis)
 	return 0;
 }
 
+static iomux_v3_cfg_t const pwr_intb_pads[] = {
+	/*
+	 * the bootrom sets the iomux to vselect, potentially connecting
+	 * two outputs. Set this back to GPIO
+	 */
+	MX6_PAD_GPIO_18__GPIO7_IO13 | MUX_PAD_CTRL(NO_PAD_CTRL)
+};
+
 #if defined(CONFIG_VIDEO_IPUV3)
 
 static iomux_v3_cfg_t const backlight_pads[] = {
@@ -525,14 +533,6 @@ static iomux_v3_cfg_t const backlight_pads[] = {
 	/* PSAVE# integrated VDAC */
 	MX6_PAD_EIM_BCLK__GPIO6_IO31 | MUX_PAD_CTRL(NO_PAD_CTRL),
 #define VGA_PSAVE_NOT_GP IMX_GPIO_NR(6, 31)
-};
-
-static iomux_v3_cfg_t const pwr_intb_pads[] = {
-	/*
-	 * the bootrom sets the iomux to vselect, potentially connecting
-	 * two outputs. Set this back to GPIO
-	 */
-	MX6_PAD_GPIO_18__GPIO7_IO13 | MUX_PAD_CTRL(NO_PAD_CTRL)
 };
 
 static iomux_v3_cfg_t const rgb_pads[] = {
