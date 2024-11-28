@@ -1,0 +1,13 @@
+// SPDX-License-Identifier: GPL-2.0-or-later OR MIT
+/* Copyright (C) 2024 Toradex */
+
+/dts-v1/;
+
+#include "imx8mp-toradex-smarc.dtsi"
+
+/ {
+	model = "Toradex SMARC iMX8M Plus on SMARC Development Board";
+	compatible = "toradex,smarc-imx8mp-dev",
+		     "toradex,smarc-imx8mp",
+		     "fsl,imx8mp";
+};
