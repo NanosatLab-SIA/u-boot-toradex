@@ -2,3 +2,41 @@
 /* Copyright (C) 2024 Toradex */
 
 #include "imx8mp-u-boot.dtsi"
+
+/ {
+	sysinfo {
+		compatible = "toradex,sysinfo";
+	};
+};
+
+&i2c1 {
+	bootph-pre-ram;
+};
+
+&pca9450 {
+	bootph-pre-ram;
+
+	regulators {
+		bootph-pre-ram;
+	};
+};
+
+&pinctrl_i2c1 {
+	bootph-pre-ram;
+};
+
+&pinctrl_pmic {
+	bootph-pre-ram;
+};
+
+&pinctrl_uart4 {
+	bootph-pre-ram;
+};
+
+&uart4 {
+	bootph-pre-ram;
+};
+
+&usdhc3 {
+	bootph-pre-ram;
+};
