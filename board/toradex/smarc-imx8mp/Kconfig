@@ -19,7 +19,7 @@ config TDX_CFG_BLOCK_2ND_ETHADDR
 	default y
 
 config TDX_CFG_BLOCK_DEV
-	default "2"
+	default "0"
 
 config TDX_CFG_BLOCK_EXTRA
 	default y
