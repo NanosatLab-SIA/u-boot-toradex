@@ -21,9 +21,6 @@ config TDX_CFG_BLOCK_2ND_ETHADDR
 config TDX_CFG_BLOCK_DEV
 	default "0"
 
-config TDX_CFG_BLOCK_EXTRA
-	default y
-
 # Toradex config block in eMMC, at the end of 1st "boot sector"
 config TDX_CFG_BLOCK_OFFSET
 	default "-512"
