@@ -59,7 +59,7 @@ Flash to eMMC
 
     > tftpboot ${loadaddr} flash.bin
     > setexpr blkcnt ${filesize} + 0x1ff && setexpr blkcnt ${blkcnt} / 0x200
-    > mmc dev 2 1 && mmc write ${loadaddr} 0x0 ${blkcnt}
+    > mmc dev 0 1 && mmc write ${loadaddr} 0x0 ${blkcnt}
 
 As a convenience, instead of the last two commands, one may also use the update
 U-Boot wrapper:
