@@ -37,6 +37,10 @@
 	bootph-pre-ram;
 };
 
+&usdhc1 {
+	status = "disabled";
+};
+
 &usdhc3 {
 	bootph-pre-ram;
 };
