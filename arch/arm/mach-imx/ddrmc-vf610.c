@@ -170,6 +170,8 @@ void ddrmc_ctrl_init_ddr3(struct ddr3_jedec_timings const *timings,
 	writel(DDRMC_CR48_MR1_DA_0(70) |
 		   DDRMC_CR48_MR0_DA_0(1056), &ddrmr->cr[48]);
 
+	writel(DDRMC_CR57_CTRL_RAW(3), &ddrmr->cr[57]); // Enable ECC: reporting + single-bit correction)
+
 	writel(DDRMC_CR66_ZQCL(timings->zqcl) |
 		   DDRMC_CR66_ZQINIT(timings->zqinit), &ddrmr->cr[66]);
 	writel(DDRMC_CR67_ZQCS(timings->zqcs), &ddrmr->cr[67]);
