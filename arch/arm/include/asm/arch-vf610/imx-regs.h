@@ -173,6 +173,7 @@
 #define DDRMC_CR41_PHY_INI_STRT_INI_DIS			1
 #define DDRMC_CR48_MR1_DA_0(v)				(((v) & 0xffff) << 16)
 #define DDRMC_CR48_MR0_DA_0(v)				((v) & 0xffff)
+#define DDRMC_CR57_CTRL_RAW(v) 			(((v) & 0x3) << 24)
 #define DDRMC_CR66_ZQCL(v)				(((v) & 0xfff) << 16)
 #define DDRMC_CR66_ZQINIT(v)				((v) & 0xfff)
 #define DDRMC_CR67_ZQCS(v)				((v) & 0xfff)

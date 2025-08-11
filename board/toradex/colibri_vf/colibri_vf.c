@@ -31,6 +31,7 @@ DECLARE_GLOBAL_DATA_PTR;
 #define PTC0_GPIO_45		45
 
 static struct ddrmc_cr_setting colibri_vf_cr_settings[] = {
+	{ DDRMC_CR57_CTRL_RAW(3), 57 }, // Enable ECC: reporting + single-bit correction
 	{ DDRMC_CR79_CTLUPD_AREF(1), 79 },
 	/* sets manual values for read lvl. (gate) delay of data slice 0/1 */
 	{ DDRMC_CR105_RDLVL_DL_0(28), 105 },
